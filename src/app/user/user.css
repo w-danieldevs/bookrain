@@ -1,0 +1,40 @@
+/* ===== CONTENEDOR GENERAL ===== */
+.user-container {
+  max-width: 400px;
+  margin: 80px auto;              /* Centrado en la pantalla */
+  padding: 30px 25px;
+  background-color: #ffffff;      /* Fondo blanco */
+  border: 1px solid #d0e7fb;      /* Borde suave azul */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra ligera */
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== TÍTULO ===== */
+.user-container h1 {
+  color: #2980b9;                 /* Azul principal */
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* ===== BOTÓN DE CERRAR SESIÓN ===== */
+.user-container button {
+  background-color: #e2f0fd;      /* Azul claro (tu color base) */
+  color: #2980b9;
+  border: 1px solid #b6d9f6;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.user-container button:hover {
+  background-color: #cde4fc;      /* Un tono un poco más oscuro en hover */
+  transform: translateY(-2px);
+}
+
+.user-container button:active {
+  transform: translateY(0);
+}

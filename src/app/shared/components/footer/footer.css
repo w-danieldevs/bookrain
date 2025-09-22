@@ -1,0 +1,38 @@
+.footer {
+  width: 100%;
+  font-family: Arial, sans-serif;
+  margin-top: 40px;
+}
+
+/* Parte superior - color blanco */
+.footer-top {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  border-top: 2px solid #e2f0fd;
+}
+
+.footer-top h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.footer-top nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.footer-top nav a:hover {
+  color: #0077cc;
+}
+
+/* Parte inferior - color azul claro */
+.footer-bottom {
+  background-color: #e2f0fd;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #333;
+}

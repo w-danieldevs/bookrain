@@ -1,0 +1,72 @@
+<nav class="navbar">
+
+  <img src="logol.png" alt="Logo" class="logo">
+
+
+ <div class="busqueda">
+  <input type="text"
+         placeholder="Buscar..."
+         [(ngModel)]="searchText"
+         (keyup.enter)="irADetalle(searchText)" />
+  <img src="icons/lupa.png" alt="Buscar" class="icono-buscar">
+
+
+  <ul class="resultados" *ngIf="searchText && filteredItems.length > 0">
+    <li *ngFor="let item of filteredItems"
+        (click)="irADetalle(item)">
+      {{ item }}
+    </li>
+  </ul>
+
+
+  <p class="sin-resultados"
+     *ngIf="searchText && filteredItems.length === 0">
+    No se encontraron resultados
+  </p>
+</div>
+
+
+
+  <ul class="nav-links">
+  <li><a class="lo" routerLink="/login" routerLinkActive="active">
+    <img class="usuario" src="icons/usuario.png" alt="usuario">
+    <span class="cuenta-texto">Cuenta</span>
+  </a></li>
+    <li>
+      <div class="carrito-container">
+        <button (click)="toggleMenu()">
+          <img src="icons/carrito.png" class="carrito" alt="Carrito">
+          <span class="contador">{{ carritoService.carrito().length }}</span>
+        </button>
+        <div *ngIf="menuAbierto()">
+          <div *ngIf="carritoService.carrito().length === 0">
+            El carrito está vacío.
+          </div>
+          <ul *ngIf="carritoService.carrito().length > 0">
+            <li *ngFor="let producto of carritoService.carrito(); let i = index">
+              {{ producto.nombre }} - ${{ producto.precio }}
+              <button (click)="eliminar(i)">Eliminar</button>
+            </li>
+          </ul>
+          <div *ngIf="carritoService.carrito().length > 0">
+            Total: ${{ carritoService.total() }}
+            <button (click)="vaciar()">Vaciar carrito</button>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<hr>
+
+<nav class="subnav">
+  <ul>
+    <li><a routerLink="/libros" routerLinkActive="active">Libros</a></li>
+    <li><a routerLink="/register" routerLinkActive="active">Registro</a></li>
+    <li><a routerLink="/" routerLinkActive="active">Promociones</a></li>
+  </ul>
+</nav>
+
+<hr>
+

@@ -1,0 +1,256 @@
+.carousel {
+  position: relative;
+  width: auto;
+  max-width: 1500px;
+  margin: auto;
+  overflow: hidden;
+  margin-top: 15px;
+
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+.slide {
+  min-width: 100%;
+}
+
+.slide img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Botones */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Indicadores */
+.indicators {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.indicators span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.indicators span.active {
+  background: #007BFF;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f9fa;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+
+/* Botón del carrito */
+button {
+  cursor: pointer;
+  background: #4CAF50;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  margin: 5px 0;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #007bff;
+}
+
+/* Botón carrito principal */
+button:first-of-type {
+  font-size: 16px;
+  padding: 10px 15px;
+  background: #007bff;
+}
+
+button:first-of-type:hover {
+  background: #0056b3;
+}
+
+/* ======= Productos ======= */
+.libros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.libros p {
+  margin: 5px 0;
+}
+
+.libros img {
+  max-width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+}
+
+.libros button {
+  background: #007bff;
+  font-weight: bold;
+}
+
+.libros button:hover {
+  background: #007bff;
+}
+
+
+.menu-carrito {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 320px;
+  height: 100%;
+  background: #fff;
+  border-left: 2px solid #ddd;
+  box-shadow: -3px 0 8px rgba(0,0,0,0.2);
+  padding: 20px;
+  overflow-y: auto;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.menu-carrito h2 {
+  margin-top: 0;
+  color: #007bff;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.menu-carrito ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-carrito li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.menu-carrito li button {
+  background: #dc3545;
+  padding: 5px 8px;
+}
+
+.menu-carrito li button:hover {
+  background: #c82333;
+}
+
+.menu-carrito p {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.menu-carrito button:last-of-type {
+  width: 100%;
+  margin-top: 10px;
+  background: #007bff;
+}
+
+.menu-carrito button:last-of-type:hover {
+  background: #007bff;
+}
+
+h2 {
+  font-family: Arial, sans-serif;
+  margin-bottom: 20px;
+}
+
+.autor-card {
+  display: flex;
+  align-items: flex-start;
+  background-color: #e2f0fd; 
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 15px;
+  max-width: 1470px;
+  margin-left: 20px;
+}
+
+.autor-img {
+  width: 180px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 15px;
+}
+
+.autor-info {
+  flex: 1;
+}
+
+.autor-info h3 {
+  margin-top: 0;
+  font-size: 1.4em;
+}
+
+.autor-info p {
+  text-align: justify;
+  margin: 10px 0;
+}
+
+.autor-info a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.autor-info a:hover {
+  text-decoration: underline;
+}
+
+hr {
+ margin-top: 5px;
+ border-color: #007bff;
+ color: #007bff;
+}
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+}
+
+
+
+
+

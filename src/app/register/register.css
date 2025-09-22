@@ -1,0 +1,61 @@
+/* Contenedor principal */
+.register-container {
+  max-width: 350px;
+  margin: 80px auto;               
+  padding: 30px;
+  background: #ffffff;             
+  border-radius: 12px;            
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); 
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* Título */
+.register-container h2 {
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+/* Inputs */
+.register-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.register-container input:focus {
+  border-color: #4a90e2;           /* Color al enfocar */
+  outline: none;
+  box-shadow: 0 0 6px #4a90e260;
+}
+
+/* Botón */
+.register-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4a90e2;       
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.register-container button:hover {
+  background-color: #357ab8;      
+}
+
+/* Mensaje de error o éxito */
+.register-container p {
+  margin-top: 15px;
+  color: #4a90e2;                  
+  font-weight: bold;
+  min-height: 20px;               
+}

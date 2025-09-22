@@ -1,0 +1,13 @@
+
+<h2 class="titulo-pagina">Todos los Libros</h2>
+
+<div class="libros-grid">
+  <div class="libro-card" *ngFor="let libro of libros">
+    <img [src]="libro.imagen" [alt]="libro.titulo" class="libro-img" />
+    <h3>{{ libro.titulo }}</h3>
+    <p class="autor">Autor: {{ libro.autor }}</p>
+    <p class="descripcion">{{ libro.descripcion }}</p>
+    <p class="precio">Precio: ${{ libro.precio | number }}</p>
+  <button class="btn-comprar" (click)="comprar(libro)">Comprar</button>
+  </div>
+</div>

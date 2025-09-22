@@ -1,0 +1,39 @@
+<div class="carousel">
+  <div class="slides" [style.transform]="'translateX(-' + currentIndex * 100 + '%)'">
+    <div class="slide" *ngFor="let imagen of imagenes">
+      <img [src]="imagen" alt="slide">
+    </div>
+  </div>
+
+  <!-- Botones -->
+  <button class="prev" (click)="prevSlide()">❮</button>
+  <button class="next" (click)="nextSlide()">❯</button>
+
+  <!-- Puntos indicadores -->
+  <div class="indicators">
+  <span *ngFor="let i of imagenes, let idx = index"
+          [class.active]="idx === currentIndex"
+          (click)="goToSlide(idx)">
+    </span>
+  </div>
+</div>
+
+<hr> 
+
+<h2>Autores</h2>
+
+<div class="autor-card" *ngFor="let autor of autores">
+  <img [src]="autor.img" [alt]="autor.nombre" class="autor-img" />
+  <div class="autor-info">
+    <h3>{{ autor.nombre }}</h3>
+    <p>{{ autor.descripcion }}</p>
+    <a href="#">Ver libros ...</a>
+  </div>
+</div>
+
+
+
+
+
+
+
